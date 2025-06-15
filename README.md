@@ -17,8 +17,17 @@ This project demonstrates automated deployment of a Generative AI model using CI
 - **Health Check**: http://34.55.154.39/health
 - **API Endpoint**: http://34.55.154.39/generate
 
+!![Screenshot Aplikasi](Example_result.png)
+
+```bash
+## Setting V-env
+python3.11 -m venv genai-env
+source genai-env/bin/activate
+pip install -r requirements.txt 
+```
+
 ## Budget Alert
-Budget alert configured for $50 with notifications at 50%, 90%, and 100% thresholds.
+Budget alert configured for $50 with notifications at 50%, 90%, and 100% thresholds with only set up budgeting RP 200K.
 
 ## Repository Structure
 genai-cicd-project/
