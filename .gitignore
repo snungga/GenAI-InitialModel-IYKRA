@@ -1,0 +1,42 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+*env*/ # Catch various virtual env names
+
+# Specific virtual env for your project
+genai-env/
+
+# Byte-code files
+*.pyc
+__pycache__/
+
+# Compiled files
+*.so
+*.dylib # For macOS dynamic libraries like libtorch_cpu.dylib
+*.dll
+*.exe
+
+# IDE-specific files
+.vscode/
+.idea/
+*.iml
+
+# OS generated files
+.DS_Store
+.ipynb_checkpoints/ # For Jupyter notebooks
+
+# Logs and databases
+*.log
+*.sqlite3
+db.sqlite3
+
+# Test coverage reports
+.coverage
+
+# Cloud Build specific files if not needed in repo
+cloudbuild.build.yaml # If you generate this, rather than committing cloudbuild.yaml
+
+# Add any data files or output directories here if they are large and shouldn't be tracked
+# /data/
+# /output/

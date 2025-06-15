@@ -1,0 +1,36 @@
+steps:
+  # Build the Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/genai-app:$BUILD_ID'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/genai-app:latest'
+      - '.'
+
+  # Push the Docker image to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/genai-app:$BUILD_ID'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/genai-app:latest'
+
+  # Deploy to GKE
+  - name: 'gcr.io/cloud-builders/gke-deploy'
+    args:
+      - run
+      - --filename=kubernetes/
+      - --cluster=genai-cluster
+      - --location=us-central1-a
+      - --image=gcr.io/$PROJECT_ID/genai-app:$BUILD_ID
+
+options:
+  substitution_option: ALLOW_LOOSE
+  machineType: 'E2_HIGHCPU_8'
+
+timeout: 1200s
