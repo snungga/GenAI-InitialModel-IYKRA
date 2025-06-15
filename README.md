@@ -30,18 +30,22 @@ pip install -r requirements.txt
 Budget alert configured for $50 with notifications at 50%, 90%, and 100% thresholds with only set up budgeting RP 200K.
 
 ## Repository Structure
-genai-cicd-project/
-├── src/
-│   ├── app.py          # Flask application
-│   └── model.py        # GenAI model wrapper
-├── kubernetes/
-│   ├── deployment.yaml # K8s deployment
-│   ├── service.yaml    # LoadBalancer service
-│   └── hpa.yaml        # Horizontal Pod Autoscaler
-├── cloudbuild.yaml     # CI/CD pipeline
-├── Dockerfile          # Container configuration
-├── requirements.txt    # Python dependencies
-└── README.md          # Documentation
+📦GenAI-InitialModel-IYKRA
+ ┣ 📂kubernetes
+ ┃ ┣ 📜deployment.yaml
+ ┃ ┣ 📜hpa.yaml
+ ┃ ┗ 📜service.yaml
+ ┣ 📂manifests
+ ┣ 📂src
+ ┃ ┣ 📜app.py
+ ┃ ┗ 📜model.py
+ ┣ 📜.dockerignore
+ ┣ 📜.gitignore
+ ┣ 📜Dockerfile
+ ┣ 📜Example_result.png
+ ┣ 📜README.md
+ ┣ 📜cloudbuild.yaml
+ ┗ 📜requirements.txt
 
 ## Setup Instructions
 1. Clone repository
