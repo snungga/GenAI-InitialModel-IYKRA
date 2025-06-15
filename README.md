@@ -16,6 +16,7 @@ This project demonstrates automated deployment of a Generative AI model using CI
 - **API Endpoint**: http://34.55.154.39/generate
 
 !![Screenshot Aplikasi](Example_result.png)
+!![Screenshot Billing](Billing_GCP.png)
 
 ```bash
 ## Setting V-env
