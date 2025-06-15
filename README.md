@@ -1,5 +1,3 @@
-Adding a timestamp for Cloud Build trigger test on Mon Jun 16 02:24:16 WIB 2025
-
 # Generative AI CI/CD Deployment on GCP
 
 ## Overview
